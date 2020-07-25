@@ -1,0 +1,27 @@
+{
+  "name": "virtuous-circle",
+  "version": "1.0.0",
+  "description": "a solution to promote sharing of surplus fresh, local, sustainable food among pantries, restaurants and schools",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JenJayme/virtuous-circle.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JenJayme/virtuous-circle/issues"
+  },
+  "homepage": "https://github.com/JenJayme/virtuous-circle#readme"
+}
