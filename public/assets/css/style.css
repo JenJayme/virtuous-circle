@@ -1,0 +1,20 @@
+li {
+    padding: 5px;
+    margin: 5px;
+    background: #faebd7;
+  }
+
+  .addBundle {
+    padding: 5px;
+    margin: 5px;
+    background: aqua;
+  }
+  
+  .label {
+    font-weight: bold;
+  }
+  
+  .form-group {
+    margin-bottom: 5px;
+  }
+  
