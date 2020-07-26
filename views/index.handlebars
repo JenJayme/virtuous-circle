@@ -3,7 +3,7 @@
 <h2>Offered</h2>
 
 <ul class="claimed">
-    {{#each foodbundles}}
+    {{#each foodcircle}}
         {{#if claimed}
             {{>foodbundles/bundle-block claimed=true}}
         {{/unless}}
@@ -12,7 +12,7 @@
 <h2 class="offered"></h2>
 
 <ul>
-    {{#each foodbundles}}
+    {{#each foodcircle}}
         {{#unless claimed}}
             {{>foodbundles/bundle-block claimed=false}}
         {{/if}}
