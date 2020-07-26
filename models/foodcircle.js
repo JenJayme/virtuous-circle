@@ -6,7 +6,7 @@ var orm = require('../config/orm.js');
 //create an object that represents the basic unit, with create, read, update & delete functions that will interact with the connection.query functions defined in the ORM
 var foodbundle = {
     all: function(cb) {
-        orm.all('foodbundles', cols, vals, cb {
+        orm.all('foodbundles', function (res) {
             cb(res);
         });
     },

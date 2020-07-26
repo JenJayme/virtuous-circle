@@ -45,7 +45,7 @@ router.put('/api/foodcircle/:id', function(req, res) {
     });
 });
 
-router.delete('/api/foodcircle/:id', function(req. res) {
+router.delete('/api/foodcircle/:id', function(req, res) {
     var condition = 'id = ' + req.params.id;
 
     foodbundle.delete(condition, function(result) {
