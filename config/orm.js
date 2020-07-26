@@ -1,3 +1,5 @@
+// The ORM has all of the connection.queries, defined generically with placeholders for table names, fields & values
+
 var connection = require('./connection.js');
 const { query } = require('express');
 

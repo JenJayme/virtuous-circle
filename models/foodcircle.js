@@ -1,3 +1,5 @@
+//The model is an object like a class with functions defined to create, read, update & delete
+
 // Import the ORM to create functions that will interact with the database.
 var orm = require('../config/orm.js');
 

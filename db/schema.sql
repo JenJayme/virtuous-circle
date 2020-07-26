@@ -11,4 +11,3 @@ CREATE TABLE foodbundles (
     claimed BOOLEAN,
     PRIMARY KEY (id)
 )
-
