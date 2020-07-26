@@ -1,0 +1,9 @@
+<li class="listItem">
+    {{name}}
+
+    <button class="claimItem" data-id="{{id}}" data-claimed="{{claimed}}">
+        {{#if offered}}Deliver{{else}}Claim{{/if}}
+    </button>
+
+    <button class="delete" data-id="{{this.id}}">Delete</button>
+</li>
