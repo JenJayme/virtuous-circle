@@ -2,11 +2,13 @@ var connection = require('./connection.js');
 const { query } = require('express');
 
 var orm = {
-    selectAll: function selectAll(table) {
+    selectAll: function selectAll(table, cb) {
         var queryString = 'SELECT * FROM ??';
         connection.query(queryString, [table], function(err, results) {
-            if (err) throw err;
-            console.table(results);
+            if (err) {
+                throw err;
+            }
+            cb(results);
         });
     },
 
@@ -20,7 +22,7 @@ var orm = {
         connection.query(queryString, [table, fields, values], function(err, results) {
             if (err) throw err;
 
-            CB(results);
+            cb(results);
         });
     },
 
