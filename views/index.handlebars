@@ -1,0 +1,36 @@
+<h1 class="headline">Surplus Food Items</h1>
+
+<h2>Offered</h2>
+
+<ul class="offered">
+    {{#each foodbundles}}
+    {{#unless offered}}
+    {{>foodbundles/foodcircle-block offered=true}}
+    {{/unless}}
+    {{/each}}
+</ul>
+<h2 class="claimed"></h2>
+
+<ul>
+    {{#each foodbundles}}
+    {{#if offered}}
+    {{>foodbundles/foodcircle-block offered=false}}
+    {{/if}}
+    {{/each}}
+</ul>
+
+<h2>Add A Bundle</h2>
+<form class="create-form">
+    <div class="form-group">
+        <label for="bundleName" class="bundleItem"></label>
+        <input type="text" id="inputBox" name="name">
+    </div>
+
+    <div class="form-group">
+        <label for="offered">Offered</label><br>
+        <input type="radio" name="offered" value="1" checked> Offered<br>
+        <input type="radio" name="offered" value="0"> Claimed
+    </div>
+
+    <button type="submit">Add Bundle</button>
+</form>
