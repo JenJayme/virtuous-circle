@@ -2,19 +2,19 @@
 
 <h2>Offered</h2>
 
-<ul class="offered">
+<ul class="claimed">
     {{#each foodbundles}}
-        {{#unless offered}}
-            {{>foodbundles/bundle-block offered=true}}
+        {{#if claimed}
+            {{>foodbundles/bundle-block claimed=true}}
         {{/unless}}
     {{/each}}
 </ul>
-<h2 class="claimed"></h2>
+<h2 class="offered"></h2>
 
 <ul>
     {{#each foodbundles}}
-        {{#if offered}}
-            {{>foodbundles/bundle-block offered=false}}
+        {{#unless claimed}}
+            {{>foodbundles/bundle-block claimed=false}}
         {{/if}}
     {{/each}}
 </ul>
@@ -22,13 +22,13 @@
 <h2>Add A Bundle</h2>
 <form class="create-form">
     <div class="form-group">
-        <label for="bundleName" class="addBundle"></label>
+        <label for="inputBox" class="addBundle"></label>
         <input type="text" id="inputBox" name="name">
     </div>
 
     <div class="form-group">
         <label for="offered">Active Offerings</label><br>
-        <input type="radio" name="offered" value="1" checked> Offered<br>
+        <input type="radio" name="claimed" value="1" checked> Offered<br>
         <input type="radio" name="offered" value="0"> Claimed
     </div>
 

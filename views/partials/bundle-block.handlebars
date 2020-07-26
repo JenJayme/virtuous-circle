@@ -2,7 +2,7 @@
     {{name}}
 
     <button class="claimItem" data-id="{{id}}" data-claimed="{{claimed}}">
-        {{#if offered}}Deliver{{else}}Claim{{/if}}
+        {{#unless claimed}}Deliver{{else}}Offered{{/if}}
     </button>
 
     <button class="delete" data-id="{{this.id}}">Delete</button>

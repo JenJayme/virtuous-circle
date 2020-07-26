@@ -21,9 +21,9 @@ router.get('/', function (req, res) {
 
 router.post('/api/foodcircle', function(req, res) {
     foodbundle.create([
-        'bundle_name', 'offered'
+        'bundle_name', 'claimed'
     ], [
-        req.body.name, req.body.offered
+        req.body.name, req.body.claimed
     ], function(result) {
         res.json({ id: result.insertId });
     });
