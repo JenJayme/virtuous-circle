@@ -10,7 +10,7 @@
         };
 
         //Send POST request.
-        $.ajax('/api/foodcircle', {
+        $.ajax('/api/foodcircle/new/', {
             type: 'POST',
             data: newBundle
         }).then(

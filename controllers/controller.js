@@ -4,13 +4,13 @@ var express = require('express');
 var router = express.Router();
 
 //Import the model to use its database functions
-var model = require('../models/foodcircle.js');
+// var model = require('../models/foodcircle.js');
 const foodbundle = require('../models/foodcircle.js');
 const { end } = require('../config/connection.js');
 
 //Create all routes with logic as needed
 router.get('/', function (req, res) {
-    foodbundle.all(function(data) {
+    foodbundle.all(function (data) {
         var hbsObject = {
             foodcircle: data
         };
@@ -19,7 +19,7 @@ router.get('/', function (req, res) {
     });
 });
 
-router.post('/api/foodcircle', function(req, res) {
+router.post('/api/foodcircle/new', function (req, res) {
     foodbundle.create([
         'bundle_name', 'claimed'
     ], [
@@ -29,7 +29,7 @@ router.post('/api/foodcircle', function(req, res) {
     });
 });
 
-router.put('/api/foodcircle/:id', function(req, res) {
+router.put('/api/foodcircle/:id', function (req, res) {
     var condition = 'id = ' + req.params.id;
 
     console.log('condition: ', condition);
@@ -45,7 +45,7 @@ router.put('/api/foodcircle/:id', function(req, res) {
     });
 });
 
-router.delete('/api/foodcircle/:id', function(req, res) {
+router.delete('/api/foodcircle/:id', function (req, res) {
     var condition = 'id = ' + req.params.id;
 
     foodbundle.delete(condition, function(result) {
