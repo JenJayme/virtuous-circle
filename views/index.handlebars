@@ -1,21 +1,25 @@
+<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+<script>
+Handlebars.registerPartial('bundle-block', '{{bundle-block}}');
+
+
 <h1 class="headline">Surplus Food Items</h1>
 
 <h2>Offered</h2>
 
 <ul class="claimed">
     {{#each foodcircle}}
-        {{#if claimed}
-            {{>foodbundles/bundle-block claimed=true}}
-        {{/unless}}
+    {{partials/bundle-block}}
     {{/each}}
 </ul>
 <h2 class="offered"></h2>
 
 <ul>
     {{#each foodcircle}}
+        {{partials/bundle-block}}
         {{#unless claimed}}
-            {{>foodbundles/bundle-block claimed=false}}
-        {{/if}}
+            {{>bundle-block}}
+        {{/unless}}
     {{/each}}
 </ul>
 

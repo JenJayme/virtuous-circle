@@ -10,9 +10,10 @@ const { end } = require('../config/connection.js');
 
 //Create all routes with logic as needed
 router.get('/', function (req, res) {
+    console.log("Processing GET request on controller...", req);
     foodcircle.all(function (data) {
         var hbsObject = {
-            foodcircle: data
+            foodbundles: data
         };
         console.log('hbsObject: '+ hbsObject);
         res.render('index', hbsObject);
@@ -26,6 +27,7 @@ router.post('/api/foodcircle/new', function (req, res) {
         req.body.name, req.body.claimed
     ], function(result) {
         res.json({ id: result.insertId });
+        console.log("Processing POST request on controller...", result);
     });
 });
 
