@@ -1,42 +1,9 @@
-
-
-<style>
-
-hr {
-    clear: both;
-    padding-top: 20px;
-    padding-bottom: 20px;
-  };
-
-img[src*="#visuals"] {
-    width:600px;
- };
-
-img[src*="#icons"] {
-    height: 60px;
-    float: left;
-    clear: right;
-};
-
-img[src*="#profile-pic"] {
-    height: 70px;
-    float: left;
-    display: block;
-    border-radius: 50%
-};
-
-img[src*="#li-logo"] {
-    height: 15px;
-};
- </style>
-
 # Virtuous Circle
-![Travis Status](https://img.shields.io/travis/:jenjayme/:readme-generator)
-![License](https://img.shields.io/github/license/jenjayme/readme-generator)
-![Inquirer](https://img.shields.io/npm/v/inquirer)
+![Travis Status](https://img.shields.io/travis/:jenjayme/:virtuous-circle)
+![License](https://img.shields.io/github/license/jenjayme/virtuous-circle)
 <hr>
 
-A bulletin board solution to promote sharing of surplus fresh, local food among food pantries, shelters, restaurants, caterers and schools.
+Virtuous Circle is a bulletin board solution to promote sharing of surplus fresh, local food among food pantries, shelters, restaurants, caterers and farmers markets.  Food suppliers often need a timely and convenient way to dispose of perfectly good unused food prepared in bulk, and there are many who need it at local shelters and food pantries.  This platform is designed to simplify the process of posting available food bundles, and getting them delivered to agencies that care for those in need.  Version 1 emphasizes simple posting of "Offered" food bundles with a simple "Claim" function; plans for development include adding contact and pickup details, and more interactivity for donors, recipients and volunteers.
 
 <hr>
 
@@ -67,15 +34,22 @@ A bulletin board solution to promote sharing of surplus fresh, local food among 
 <hr>
 
 ## [Built With](#built)
-![HTML5, CSS & Javascript](images/ic-html-css-js.png#icons)
-![VS Code](images/ic-vscode.png#icons)
+* HTML5
+* Javascript
+* VS Code
+* NPM
+* Node.js
+* Express.js
+* MySql
+* Handlebars
+* Heroku
 
 <hr>
 
 ## [Author](#author)
 Jen Jayme
 
-Web Developer
+Developer
 
 Novato, CA
 
@@ -84,4 +58,5 @@ Novato, CA
 ## Questions
 For questions or to discuss collaborations on this or other projects, contact me at:jeniferjayme@gmail.com(#contact)
 
- 
+## Acknowledgements
+Special thanks to Jerome Chenette, Berkeley Boot Camp and Trilogy for referring this project and providing some key pieces of code.  Inspired by a concept from Mason Shelnutt and the work of Extra-Food.org.  Shout out to Fred Rodolfo for critical advice and support, and to Bart Dority for generous assistance in troubleshooting.
