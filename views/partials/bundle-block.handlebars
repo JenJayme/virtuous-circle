@@ -1,9 +1,8 @@
 <li class="listItem">
     {{quantity}} of {{bundle_name}}
 
-    <button class="claimItem" data-id="{{id}}" data-claimed="{{claimed}}">
+    <button class="waves-effect waves-light btn claimItem" data-id="{{id}}" data-claimed="{{claimed}}">
         {{#unless claimed}}Claim{{/unless}}
     </button>
 
-    <button class="delete" data-id="{{this.id}}">Delete</button>
 </li>
