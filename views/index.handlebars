@@ -3,20 +3,19 @@
 <h2>Offered</h2>
 
 <ul class="claimed">
-    {{quantity}} of {{bundle_name}}
-    {{#each foodcircle}}
+    {{#each foodbundles}}
     {{partials/bundle-block}}
     {{/each}}
 </ul>
 <h2 class="offered"></h2>
 
 <ul>
-    {{#each foodcircle}}
+    {{#each foodbundles}}
         {{#if claimed}
-            {{>partials/bundle-block}}
+            {{>partials/bundle-block claimed=true}}
         {{/if}}
         {{#unless claimed}}
-            {{>bundle-block}}
+            {{>bundle-block claimed=false}}
         {{/unless}}
     {{/each}}
 </ul>
