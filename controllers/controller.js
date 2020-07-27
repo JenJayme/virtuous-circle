@@ -10,7 +10,7 @@ const { end } = require('../config/connection.js');
 
 //Create all routes with logic as needed
 router.get('/', function (req, res) {
-    console.log("Processing GET request on controller...", req);
+    console.log("Processing GET request on controller...");
     foodcircle.all(function (data) {
         var hbsObject = {
             foodbundles: data
