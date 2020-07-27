@@ -1,60 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-        <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
-        <title>Virtuous Circle</title>
-        <script src="https://code.jquery.com/jquery.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <script src="/assets/js/listeners.js"></script>
-    </head>
-    
-    <body>
-        <nav>
-            <div class="nav-wrapper purple darken-4">
-                <span class="brand-logo">Virtuous Circle</span>
-        </nav>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Virtuous Circle</title>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="/assets/js/listeners.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper light-green darken-4">
+    </nav></div>
+    <div>
+    <img src="./img/peaches.jpg" alt="peaches" class="bannerImg">
+
+    <span class="projectName">Virtuous Circle</span>
+    <div class="sheerBox"> </div>
+    <h4 class="hero-text blockquote">
+    A bulletin board to promote sharing of surplus fresh, local food among food pantries, shelters, restaurants, caterers and farmers markets.
+    </h4> </div></div>
+
+    <div class="container></div>">
+        <div class="row">
+            <h1>Welcome</h1>
+          <p>Food suppliers often need a timely and convenient way to dispose of perfectly good unused food prepared in bulk, and there are many who need it at local shelters and food pantries.  This platform is designed to simplify the process of posting available food bundles, and getting them delivered to agencies that care for those in need.  Version 1 emphasizes simple posting of "Offered" food bundles with a simple "Claim" function; plans for development include adding contact and pickup details, and more interactivity for donors, recipients and volunteers.</p>
         </div>
 
-        <container>
-        <h1 class="headline">Surplus Food Items</h1>
+        <div class="row">
+            <div class="col s6">
+            <h3 class="offered">Offered</h3>
 
-        <h2>Offered</h2>
-        
-        <ul class="claimed">
-            <li class="listItem">2 large sheet cakes</li>
-            <li class="listItem">12 cans soup</li>
-            <li class="listItem">3 crates of mixed vegetables</li>
-        </ul>
-        <h2 class="offered"></h2>
-        
-        <ul>
-            <li class="listItem">20 cans of beans<button class="claimItem" data-id="{{id}}" data-claimed="{{claimed}}">Claim</button> <button class="delete" data-id="{{this.id}}">Delete</button> </li>
-            <li class="listItem">2 crates of apples<button class="claimItem" data-id="{{id}}" data-claimed="{{claimed}}">Claim</button> <button class="delete" data-id="{{this.id}}">Delete</button></li>
-            <li class="listItem">3 crates of strawberries<button class="claimItem" data-id="{{id}}" data-claimed="{{claimed}}">Claim</button> <button class="delete" data-id="{{this.id}}">Delete</button></li>
-            <li class="listItem">5 pans of lasagna<button class="claimItem" data-id="{{id}}" data-claimed="{{claimed}}">Claim</button><button class="delete" data-id="{{this.id}}">Delete</button></li>
-            <li class="listItem">5 cans of coffee<button class="claimItem" data-id="{{id}}" data-claimed="{{claimed}}">Claim</button><button class="delete" data-id="{{this.id}}">Delete</button></li>
-        </ul>
-        
-        <h2>Add A Bundle</h2>
-        <form class="create-form">
-            <div class="form-group">
-                <label for="inputBox" class="addBundle"></label>
-                <input type="text" id="inputBox" name="name">
+            <ul>
+
+                <li class="listItem">20 cans of beans
+                    <button class="waves-effect waves-light btn claimItem" data-id="{{id}}" data-claimed="{{claimed}}">Claim</button> 
+                </li>
+                
+                <li class="listItem">2 crates of apples<button class="waves-effect waves-light btn claimItem" data-id="{{id}}"
+                    data-claimed="{{claimed}}">Claim</button> 
+                </li>
+                
+                <li class="listItem">3 crates of strawberries<button        
+                    class="waves-effect waves-light btn claimItem" data-id="{{id}}" data-claimed="{{claimed}}">Claim</button>     
+                </li>
+                
+                <li class="listItem">5 pans of lasagna<button   
+                    class="waves-effect waves-light btn claimItem" data-id="{{id}}" data-claimed="{{claimed}}">Claim</button>
+                </li>
+                
+                <li class="listItem">5 cans of coffee<button    
+                    class="waves-effect waves-light btn claimItem" data-id="{{id}}" data-claimed="{{claimed}}">Claim</button>
+                </li>
+
+            </ul>
             </div>
-        
-            <div class="form-group">
-                <label for="offered">Active Offerings</label><br>
-                <input type="radio" name="claimed" value="1" checked> Offered<br>
-                <input type="radio" name="offered" value="0"> Claimed
+
+            <div class="col s6">
+            <h3>Claimed</h3>
+
+            <ul class="claimed">
+                <li class="listItem">2 large sheet cakes</li>
+                <li class="listItem">12 cans soup</li>
+                <li class="listItem">3 crates of mixed vegetables</li>
+            </ul>
             </div>
-        
-            <button type="submit">Add Bundle</button>
-        </form>
-    </container>
+        </div>
+
+        <div class="row">
+            <div class="col s4"></div>
+            <div class="col s4">
+            <h2>Add A Bundle</h2>
+            <form class="create-form">
+                <div class="form-group">
+                    <label for="offered">What kind of food supplies would you like to offer?</label><br>
+                    
+                    <input type="text" name="bundleName" placeholder="What is it?"></div>
+                    <input type="text" name="quantity" placeholder="How much or how many, in boxes, cans, cases?"><br>
+
+                <button class="btn waves-effect waves-light" type="submit" name="action">submit
+                    <i class="material-icons right">send</i>
+                  </button>
+                  <div class="col s4"></div>
+            </form>
+        </div>
+    </div>
+    </div>
     <footer>
-
+        Image by <a
+            href="https://pixabay.com/photos/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=869386">Free-Photos</a>
+        from <a
+            href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=869386">Pixabay</a>
     </footer>
-    </body>
+</body>
+
 </html>

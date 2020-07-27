@@ -27,9 +27,7 @@ Virtuous Circle is a bulletin board solution to promote sharing of surplus fresh
 
 ## [Visuals](#visuals)
 
-![Screenshot](images/screenshot.png#visuals)
-
-![Example Gif](images/example.gif#visuals)
+![Example Gif](public/assets/img/example.gif)
 
 <hr>
 
@@ -53,10 +51,10 @@ Developer
 
 Novato, CA
 
-![LinkedIn](images/li-logo.png#li-logo)[/JenJayme](https://www.linkedin.com/in/jenjayme)
+![LinkedIn](public/assets/img/Li-logo.png)[/JenJayme](https://www.linkedin.com/in/jenjayme)
 
-## Questions
-For questions or to discuss collaborations on this or other projects, contact me at:jeniferjayme@gmail.com(#contact)
+## [Questions](#contact)
+For questions or to discuss collaborations on this or other projects, contact me at:jeniferjayme@gmail.com
 
 ## Acknowledgements
 Special thanks to Jerome Chenette, Berkeley Boot Camp and Trilogy for referring this project and providing some key pieces of code.  Inspired by a concept from Mason Shelnutt and the work of Extra-Food.org.  Shout out to Fred Rodolfo for critical advice and support, and to Bart Dority for generous assistance in troubleshooting.
