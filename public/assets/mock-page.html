@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+        <title>Virtuous Circle</title>
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="/assets/js/listeners.js"></script>
+    </head>
+    
+    <body>
+        <nav>
+            <div class="nav-wrapper purple darken-4">
+                <span class="brand-logo">Virtuous Circle</span>
+        </nav>
+        </div>
+
+        <container>
+        <h1 class="headline">Surplus Food Items</h1>
+
+        <h2>Offered</h2>
+        
+        <ul class="claimed">
+            <li class="listItem">2 large sheet cakes</li>
+            <li class="listItem">12 cans soup</li>
+            <li class="listItem">3 crates of mixed vegetables</li>
+        </ul>
+        <h2 class="offered"></h2>
+        
+        <ul>
+            <li class="listItem">20 cans of beans<button class="claimItem" data-id="{{id}}" data-claimed="{{claimed}}">Claim</button> <button class="delete" data-id="{{this.id}}">Delete</button> </li>
+            <li class="listItem">2 crates of apples<button class="claimItem" data-id="{{id}}" data-claimed="{{claimed}}">Claim</button> <button class="delete" data-id="{{this.id}}">Delete</button></li>
+            <li class="listItem">3 crates of strawberries<button class="claimItem" data-id="{{id}}" data-claimed="{{claimed}}">Claim</button> <button class="delete" data-id="{{this.id}}">Delete</button></li>
+            <li class="listItem">5 pans of lasagna<button class="claimItem" data-id="{{id}}" data-claimed="{{claimed}}">Claim</button><button class="delete" data-id="{{this.id}}">Delete</button></li>
+            <li class="listItem">5 cans of coffee<button class="claimItem" data-id="{{id}}" data-claimed="{{claimed}}">Claim</button><button class="delete" data-id="{{this.id}}">Delete</button></li>
+        </ul>
+        
+        <h2>Add A Bundle</h2>
+        <form class="create-form">
+            <div class="form-group">
+                <label for="inputBox" class="addBundle"></label>
+                <input type="text" id="inputBox" name="name">
+            </div>
+        
+            <div class="form-group">
+                <label for="offered">Active Offerings</label><br>
+                <input type="radio" name="claimed" value="1" checked> Offered<br>
+                <input type="radio" name="offered" value="0"> Claimed
+            </div>
+        
+            <button type="submit">Add Bundle</button>
+        </form>
+    </container>
+    <footer>
+
+    </footer>
+    </body>
+</html>
