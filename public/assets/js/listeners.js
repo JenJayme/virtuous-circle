@@ -1,5 +1,12 @@
 //Event handlers for button actions
 
+// Open modal when add button is clicked
+$('#openModalBtn').on('click', function () {
+    "use strict";
+    event.preventDefault();
+    modal();
+})
+
 // Add new bundle / on submit send POST request ajax query
 $('.create-form').on('submit', function (event) {
     'use strict';
@@ -65,3 +72,8 @@ $(function () {
         );
     });
 });
+
+
+$(document).ready(function(){
+    $('.modal').modal();
+  });

@@ -1,6 +1,6 @@
 body {
   background-color: #F9F9ED;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 footer {
@@ -13,6 +13,22 @@ footer {
     border-top-style: solid;
     border-top-width: 5px;
     border-top-color: black;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin-top: 10px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+row {
+  margin-bottom: 10px;
 }
 
 .bannerImg {
@@ -61,6 +77,15 @@ footer {
   font-size: 24px;
   height: 150px;
   position: fixed;
+}
+
+#openModalBtn {
+  display: block;
+  position: relative;
+  margin: auto;
+  bottom: 20%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .listItem {
