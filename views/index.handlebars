@@ -3,7 +3,9 @@
         <h3>Offered</h3>
         <ul class="offered">
             {{#each foodbundles}}
-            {{> bundle-block}}
+                {{#unless claimed}}
+                    {{> bundle-block claimed=true}}
+                {{/unless}}
             {{/each}}
         </ul>
     </div>
@@ -13,7 +15,9 @@
 
         <ul class="claimed">
             {{#each foodbundles}}
-            {{> bundle-block}}
+                {{#if claimed}}
+                    {{> bundle-block claimed=false}}
+                {{/if}}
             {{/each}}
         </ul>
     </div>
@@ -27,8 +31,8 @@
                 <div class="form-group">
                     <label for="offered">What kind of food supplies would you like to offer?</label><br>
 
-                    <input type="text" name="bundleName" placeholder="What is it?"></div>
-                <input type="text" name="quantity" placeholder="How much or how many, in boxes, cans, cases?"><br>
+                    <input id="inputBox" type="text" name="bundle_name" placeholder="What is it?"></div>
+                <input id="quantityInputBox" type="text" name="quantity" placeholder="How much or how many, in boxes, cans, cases?"><br>
 
                 <button class="btn waves-effect waves-light" type="submit" name="action">submit
                     <i class="material-icons right">send</i>

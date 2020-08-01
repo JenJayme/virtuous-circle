@@ -7,6 +7,7 @@ var router = express.Router();
 // var model = require('../models/foodcircle.js');
 const foodcircle = require('../models/foodcircle');
 const { end } = require('../config/connection.js');
+const orm = require('../config/orm');
 
 //Create all routes with logic as needed
 router.get('/', function (req, res) {
@@ -32,12 +33,13 @@ router.post('/api/foodcircle/new', function (req, res) {
 });
 
 router.put('/api/foodcircle/:id', function (req, res) {
+    console.log("Accessing controller.js PUT function...")
     var condition = 'id = ' + req.params.id;
 
     console.log('condition: ', condition);
 
     foodcircle.update({
-        offered: req.body.offered
+        claimed: req.body.claimed
     }, condition, function(result) {
         if (result.changedRows == 0) {
             return res.status(404).end();

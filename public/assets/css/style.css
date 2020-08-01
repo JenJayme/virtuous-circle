@@ -87,7 +87,7 @@ footer {
 .sheerBox {
     width: 70%;
     background-color: wheat;
-    position: absolute;
+    position: relative;
     top: 30%;
     left: 15%;
     opacity: 30%;

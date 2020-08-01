@@ -16,6 +16,7 @@ var orm = {
     },
 
     insertOne: function insertOne(table, fields, values, cb) {
+        console.log("Accessing insertOne function in ORM...");
         var queryString = 'INSERT INTO '+ table;
         queryString += ' (';
         queryString += fields.toString();
@@ -29,13 +30,10 @@ var orm = {
         });
     },
 
-    updateOne: function updateOne(table, condition, updateFieldValObj, cb) {
-        var queryString = 'UPDATE ' + table;
-        queryString += ' SET ';
-        queryString += objToSql(updateFieldValObj);
-        queryString += ' WHERE ';
-        queryString += condition;
+    updateOne: function updateOne(table, updateFieldValObj, condition, cb) {
+        var updateFieldValSQL = objToSql(updateFieldValObj);
 
+        var queryString= `UPDATE ${table} SET ${updateFieldValSQL} WHERE ${condition}`;
         console.log('queryString =' + queryString);
         connection.query(queryString, function (err, results) {
             if (err) { 
@@ -64,7 +62,7 @@ var orm = {
 // Helper function to convert object key/value pairs to SQL syntax
 function objToSql(ob) {
     var arr = [];
-
+  
     // loop through the keys and push the key/value as a string int arr
     for (var key in ob) {
       var value = ob[key];
@@ -83,5 +81,6 @@ function objToSql(ob) {
     // translate array of strings to a single comma-separated string
     return arr.toString();
   }
+
 
 module.exports = orm;
