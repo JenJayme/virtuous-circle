@@ -1,16 +1,11 @@
 var express = require('express');
-//Serve up static assets from public
-// app.use(express.static(__dirname + "/public"));
+
 var app = express();
 
+//Serve up static assets from public
 app.use(express.static('public'));
 
 var PORT = process.env.PORT || 8080;
-
-var app = express();
-
-//Serve up static assets from public
-app.use(express.static(__dirname + "/public"));
 
 // Parse application body as JSON
 app.use(express.urlencoded({ extended: true }));
@@ -20,7 +15,6 @@ app.use(express.json());
 var exphbs = require('express-handlebars');
 
 app.engine('handlebars', exphbs ({defaultLayout: 'main' }));
-
 app.set('view engine', 'handlebars');
 
 // Import routes and give server access to them

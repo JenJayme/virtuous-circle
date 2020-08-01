@@ -3,7 +3,7 @@
         <h3>Offered</h3>
         <ul class="offered">
             {{#each foodbundles}}
-            {{partials/bundle-block}}
+            {{> bundle-block}}
             {{/each}}
         </ul>
     </div>
@@ -13,6 +13,7 @@
 
         <ul class="claimed">
             {{#each foodbundles}}
+            {{> bundle-block}}
             {{/each}}
         </ul>
     </div>
