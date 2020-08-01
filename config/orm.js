@@ -1,6 +1,6 @@
 // The ORM has all of the connection.queries, defined generically with placeholders for table names, fields & values
 
-var connection = require('/Users/floje/OneDrive/Desktop/codecamp/homework/virtuous-circle/config/connection');
+var connection = require('./connection');
 const { query } = require('express');
 
 var orm = {

@@ -13,3 +13,12 @@ MVC Elements
 <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
 <script>
 Handlebars.registerPartial('bundle-block', '{{bundle-block}}');
+
+
+{{#if claimed}
+                    {{>partials/bundle-block claimed=true}}
+                {{/if}}
+                {{#unless claimed}}
+                    {{>bundle-block claimed=false}}
+                {{/unless}}
+            {{/each}}

@@ -12,14 +12,7 @@
         <h3>Claimed</h3>
 
         <ul class="claimed">
-
             {{#each foodbundles}}
-                {{#if claimed}
-                    {{>partials/bundle-block claimed=true}}
-                {{/if}}
-                {{#unless claimed}}
-                    {{>bundle-block claimed=false}}
-                {{/unless}}
             {{/each}}
         </ul>
     </div>
@@ -34,10 +27,13 @@
                     <label for="offered">What kind of food supplies would you like to offer?</label><br>
 
                     <input type="text" name="bundleName" placeholder="What is it?"></div>
-                    <input type="text" name="quantity" placeholder="How much or how many, in boxes, cans, cases?"><br>
+                <input type="text" name="quantity" placeholder="How much or how many, in boxes, cans, cases?"><br>
 
-                    <button class="btn waves-effect waves-light" type="submit" name="action">submit
+                <button class="btn waves-effect waves-light" type="submit" name="action">submit
                     <i class="material-icons right">send</i>
-                    </button>
+                </button>
                 <div class="col s4"></div>
             </form>
+        </div>
+    </div>
+</div>
