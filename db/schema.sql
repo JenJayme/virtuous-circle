@@ -21,7 +21,8 @@ CREATE TABLE contacts (
     email VARCHAR(75),
     phone VARCHAR(20),
     contact_type VARCHAR(20),
-    PRIMARY KEY (id)
+    PRIMARY KEY (id),
+    FOREIGN KEY (contact_type) REFERENCES contact_types (type_id)
 )
 
 CREATE TABLE transactions (
@@ -33,11 +34,23 @@ CREATE TABLE transactions (
     contact_id INTEGER,
     trans_type_id INTEGER,
     foodbundle_id INTEGER,
-    FOREIGN KEY (trans_type_id) REFERENCES types(type_id)
+    FOREIGN KEY (trans_type_id) REFERENCES transaction_types (trans_type_id),
+    FOREIGN KEY (contact_id) REFERENCES contacts (contact_id),
+    FOREIGN KEY (foodbundle_id) REFERENCES foodbundles (foodbundle_id)
 )
 
-CREATE TABLE types (
+CREATE TABLE transaction_types (
+    trans_type_id INTEGER AUTO_INCREMENT NO NULL,
+    type_name VARCHAR(20),
+    PRIMARY KEY (id),
+    FOREIGN KEY (contact_id) REFERENCES contacts (contact_id)
+)
+
+
+CREATE TABLE contact_types (
     type_id INTEGER AUTO_INCREMENT NO NULL,
     type_name VARCHAR(20),
-    related_table VARCHAR(20)
+    contact_id VARCHAR(20),
+    PRIMARY KEY (id),
+    FOREIGN KEY (contact_id) REFERENCES contacts(contact_id)
 )

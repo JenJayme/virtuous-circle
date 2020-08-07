@@ -8,7 +8,6 @@ footer {
     width: 100%;
     color: whitesmoke;
     background: rgb(6, 58, 58);
-    opacity: 50%;
     padding: 15px;
     border-top-style: solid;
     border-top-width: 5px;
@@ -24,6 +23,8 @@ h3 {
 }
 
 p {
+  padding: 1em;
+  padding-bottom: .3em;
   margin-bottom: 10px;
 }
 
@@ -31,9 +32,16 @@ row {
   margin-bottom: 10px;
 }
 
+#bannerDiv {
+  height: 650px;
+  background-image: url(../img/peaches.jpg);
+  overflow: hidden;
+}
+
+
 .bannerImg {
   width: 100%;
-  height: 40%;
+  /* height: 40%; */
   overflow: hidden;
   float: none;
   background-position: center;
@@ -46,6 +54,14 @@ row {
   margin: 10px;
   display: inline;
   align: right;
+}
+
+#btnRow {
+  padding-left: 1em;
+  margin-left: 50%;
+  display: inline-block;
+  margin: auto;
+  clear: none;
 }
 
 .projectName {
@@ -75,17 +91,8 @@ row {
   color: #faebd7;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 24px;
-  height: 150px;
+  height: 100px;
   position: fixed;
-}
-
-#openModalBtn {
-  display: block;
-  position: relative;
-  margin: auto;
-  bottom: 20%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 
 .listItem {
@@ -112,7 +119,7 @@ row {
 .sheerBox {
     width: 70%;
     background-color: wheat;
-    position: relative;
+    position: absolute;
     top: 30%;
     left: 15%;
     opacity: 30%;

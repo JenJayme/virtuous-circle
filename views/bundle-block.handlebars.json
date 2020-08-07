@@ -1,6 +1,0 @@
-var foodcircle = {
-    "id": 9
-    "bundle_name": "lasagna",
-    "quantity" : "2 pans",
-    "claimed" : 0
-}
