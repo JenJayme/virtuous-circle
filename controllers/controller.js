@@ -21,11 +21,13 @@ router.get('/', function (req, res) {
     });
 });
 
-router.post('/api/foodcircle/new', function (req, res) {
+router.post('/api/foodcircle/', function (req, res) {
+    console.log("Processing POST request on controller");
+
     foodcircle.create([
-        'bundle_name', 'claimed'
+        'bundle_name', 'quantity','claimed'
     ], [
-        req.body.name, req.body.claimed
+        req.body.bundle_name, req.body.quantity, req.body.claimed
     ], function(result) {
         res.json({ id: result.insertId });
         console.log("Processing POST request on controller...", result);
@@ -33,7 +35,7 @@ router.post('/api/foodcircle/new', function (req, res) {
 });
 
 router.put('/api/foodcircle/:id', function (req, res) {
-    console.log("Accessing controller.js PUT function...")
+    console.log("Accessing controller.js PUT functio...")
     var condition = 'id = ' + req.params.id;
 
     console.log('condition: ', condition);

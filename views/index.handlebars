@@ -3,9 +3,9 @@
         <h3>Offered</h3>
         <ul class="offered">
             {{#each foodbundles}}
-                {{#unless claimed}}
-                    {{> bundle-block claimed=true}}
-                {{/unless}}
+            {{#unless claimed}}
+            {{> bundle-block claimed=true}}
+            {{/unless}}
             {{/each}}
         </ul>
     </div>
@@ -15,16 +15,48 @@
 
         <ul class="claimed">
             {{#each foodbundles}}
-                {{#if claimed}}
-                    {{> bundle-block claimed=false}}
-                {{/if}}
+            {{#if claimed}}
+            {{> bundle-block claimed=false}}
+            {{/if}}
             {{/each}}
         </ul>
     </div>
 </div>
 
+{{!-- test form --}}
 
-<!-- Modal Structure -->
+{{!-- <div class="row">
+    <h1>Test Form</h1>
+    <form class="create-form">
+        <div class="form-group">
+
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="Placeholder" id="test-bundleName" type="text">
+                        <label for="test-bundleName">What is it?</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="test-quantity" type="text">
+                        <label for="test-quantity">How much or how many?</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                <button id="submitNewBtn" class="submitBtn btn waves-effect waves-light" type="submit" name="action">submit
+                    <i class="material-icons right">send</i>
+                </button>
+                </div>
+
+            </form>
+        </div>
+
+</div>
+</form> --}}
+
+
+<!-- Add New Item Modal  -->
+
 <div id="addModal" class="modal">
     <div class="modal-content">
         <h2>Add A Bundle</h2>
@@ -33,20 +65,21 @@
                 <label for="offered">What kind of food supplies would you like to offer?</label><br>
 
                 <input id="inputBox" type="text" name="bundle_name" placeholder="What is it?"></div>
-            <input id="quantityInputBox" type="text" name="quantity"
+                <input id="quantityInputBox" type="text" name="quantity"
                 placeholder="How much or how many, in boxes, cans, cases?"><br>
 
-            <button class="btn waves-effect waves-light" type="submit" name="action">submit
+                <button id="submitNewBtn" class="btn waves-effect waves-light" type="submit" name="action">submit
                 <i class="material-icons right">send</i>
-            </button>
-            <div class="col s4"></div>
+                </button>
+            </div>
+
+            <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green    btn-flat">Close Without Adding</a>
+            </div>
         </form>
     </div>
-
-    <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close Without Adding</a>
-    </div>
 </div>
+{{!-- </div> --}}
 
 <div class="row">
     <div class="col s12">
